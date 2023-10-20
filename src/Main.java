@@ -16,19 +16,12 @@ public class Main {
         addGiraffes(giraffes);
         System.out.println(giraffes);
 
-        giraffeHunting(giraffes);System.out.println(giraffes);
-        giraffeHunting(giraffes);System.out.println(giraffes);
-
-
+        for (Lion l : lions) {
+            l.giraffeHunting(giraffes);
+            System.out.println(giraffes);
+        }
     }
-    public static ArrayList<Giraffe> giraffeHunting(ArrayList<Giraffe> giraffes){
 
-            Random random = new Random();
-            int k = random.nextInt(giraffes.size());
-            giraffes.remove(k);
-
-        return giraffes;
-    }
     private static void addGiraffes(ArrayList<Giraffe> giraffes) {
         Giraffe giraffe1 = new Giraffe("жираф1",25);
         giraffes.add(giraffe1);
